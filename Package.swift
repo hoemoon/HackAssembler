@@ -6,12 +6,13 @@ import PackageDescription
 let package = Package(
 	name: "HackAssembler",
 	dependencies: [
-		.package(path: "Parser")
+		.package(path: "Parser"),
+    .package(path: "Code")
 	],
 	targets: [
 		.target(
 			name: "HackAssembler",
-			dependencies: ["Parser"]),
+			dependencies: ["Parser", "Code"]),
 		.testTarget(
 			name: "HackAssemblerTests",
 			dependencies: ["HackAssembler"]),
